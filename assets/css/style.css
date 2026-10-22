@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+*{box-sizing:border-box}
+html{min-height:100%;scroll-behavior:smooth}
+body{margin:0;min-height:100vh;font-family:'DM Sans',Segoe UI,Arial,sans-serif;color:#102b50;background:radial-gradient(ellipse at top left,#bfdbfe 0,transparent 43%),linear-gradient(135deg,#eaf4ff,#d7e9ff)}
+/* Footer follows all page content and sits at viewport bottom on short pages */
+body{display:flex;flex-direction:column}
+body>footer{margin-top:auto}
+a{color:#2563eb;transition:color .18s}
+a:hover{color:#1746a2}
+header{position:relative;z-index:5}
+header:has(nav){display:flex;align-items:center;justify-content:space-between;gap:22px;padding:17px clamp(20px,5vw,72px);background:rgba(216,222,255,.94);border-bottom:1px solid #c8ddf5;box-shadow:0 4px 20px #1a274b0a;backdrop-filter:blur(14px)}
+header .logo{display:flex;align-items:center;gap:12px}
+header .logo img{width:82px;height:82px;object-fit:contain}
+header .logo h1{font:800 1.85rem Manrope,sans-serif;margin:0;color:#961fab}
+header nav{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+header nav a:not(.btn){text-decoration:none;color:#555b82;padding:9px 12px;border-radius:9px}
+header nav a:not(.btn):hover{background:#e3e0ff;color:#2563eb}
+.auth-container{width:min(92%,450px);margin:clamp(55px,10vh,100px) auto 48px;padding:clamp(26px,5vw,40px);border:1px solid rgba(211,232,255,.9);border-radius:24px;background:rgba(222,239,255,.94);color:#102b50;box-shadow:0 24px 70px rgba(39,48,91,.14);backdrop-filter:blur(12px);text-align:center}
+.auth-container h2{font:800 clamp(1.7rem,4vw,2.1rem) Manrope,sans-serif;letter-spacing:-.04em;margin:0 0 8px}
+.auth-container form{display:grid;gap:15px;margin-top:24px}
+.auth-container input,.auth-container select,.auth-container button{width:100%;padding:13px 15px;border:1px solid #dce3ef;border-radius:11px;font:inherit}
+.auth-container input,.auth-container select{background:#fbfcff;color:#102b50;outline:none;transition:border-color .18s,box-shadow .18s}
+.auth-container input:focus,.auth-container select:focus{border-color:#8988f1;box-shadow:0 0 0 4px rgba(91,92,226,.12)}
+.auth-container button{border:0;background:linear-gradient(135deg,#2563eb,#3b82f6);color:#fff;font-weight:700;cursor:pointer;box-shadow:0 7px 16px rgba(91,92,226,.2);transition:transform .18s,filter .18s}
+.auth-container button:hover{filter:brightness(.97);transform:translateY(-1px)}
+.auth-container a{color:#5556d8;font-weight:600;text-decoration:none}
+.auth-container a:hover{text-decoration:underline}
+.password-container{position:relative}
+.password-container input{padding-right:48px}
+.toggle-password{position:absolute;right:14px;top:50%;transform:translateY(-50%);cursor:pointer}
+.hero{min-height:82vh;display:flex;align-items:center;justify-content:center;padding:100px 20px 60px;background:radial-gradient(circle at 15% 15%,#8584f4 0,transparent 35%),linear-gradient(135deg,#22284d,#4d4fc0 58%,#6d70e8);color:#fff}
+.hero-content{width:min(100%,850px);min-height: 300px;padding:clamp(30px,6vw,62px);border:1px solid #ffffff30;border-radius:28px;background:#17172b88;text-align:center;box-shadow:0 25px 70px #10132c4d;backdrop-filter:blur(12px)}
+.hero-content h1{font:800 clamp(2.1rem,5vw,3.8rem)/1.1 Manrope,sans-serif;letter-spacing:-.055em;color:#fff;margin:0 0 20px}
+.hero-content p{font-size:1.1rem;max-width:640px;margin:0 auto;color:#e6e8ff}
+.features{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;padding:55px 20px}
+.feature{padding:25px;border:1px solid #c8ddf5;border-radius:18px;background:linear-gradient(145deg,#eaf5ff,#d2e7ff);max-width:310px;box-shadow:0 12px 35px #2030550c}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:11px;background:#ffdf60;color:#171717!important;text-decoration:none;font-weight:700;transition:transform .18s,box-shadow .18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px #0002}
+.btn.signup{background:#ffad5a;color:#171717!important}
+.btn.big{padding:14px 24px}
+
+/* Footer: blue-purple gradient, at the end of page content */
+footer{position:static;padding:22px;margin-top:50px;text-align:center;background:linear-gradient(110deg,#293e94,#5541a8);color:#e8eaff}
+
+@media(max-width:700px){header:has(nav){align-items:flex-start;flex-direction:column;padding:15px 20px}header nav{width:100%}.hero{min-height:70vh;padding-top:50px}.auth-container{margin-top:45px}}
+
+/* Blue-purple surfaces instead of plain white */
+body{background:radial-gradient(ellipse at 8% 5%,#a8d4ff 0,transparent 38%),radial-gradient(ellipse at 92% 8%,#c7a9ff 0,transparent 40%),linear-gradient(135deg,#c5dcff 0%,#d6caff 48%,#b9d2ff 100%)}
+.auth-container{background:linear-gradient(135deg,rgba(202,225,255,.98),rgba(218,203,255,.98));border-color:#b9c4f2}
+.auth-container input,.auth-container select{background:linear-gradient(135deg,#dceaff,#e0d7ff);border-color:#b9c7ee}
+.feature{background:linear-gradient(135deg,#d9eaff,#dcd0ff);border-color:#b8c6f5}
